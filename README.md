@@ -18,10 +18,11 @@ Building Vagrant boxes:
 	./build-vagrant
 
 There are matching `clean-{iso,vbox,vagrant}` programs that remove the products of their build counterparts.
+These scripts were originally written for OS X, but I have modified and tested them on an Ubuntu 10.10 Linux machine.
 
 Build dependencies
 ------------------
-
+* `VirtualBox 4.0`
 * `curl`
 * `m4`
 * `mkisofs`

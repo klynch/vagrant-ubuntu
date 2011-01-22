@@ -1,24 +1,31 @@
-Ubuntu for DevStructure
+Ubuntu Vagrant base box
 =======================
 
-Build a custom Ubuntu ISO for DevStructure by downloading, extracting,
-tweaking, and packaging the stock Ubuntu ISO.
+Build bootable `i386` and `amd64` Ubuntu ISOs for use with Vagrant/VirtualBox.
+
+Building
+--------
+Configure settings in `config.sh`, then build the ISO images:
+
+	./build-iso
+
+Building virtual machines through VirtualBox:
+
+	./build-vbox
+
+Building Vagrant boxes:
+
+	./build-vagrant
+
+There are matching `clean-{iso,vbox,vagrant}` programs that remove the products of their build counterparts.
 
 Build dependencies
 ------------------
 
-* `curl`(1).
-* `hdiutil`(1), and therefore Mac OS X.  It may be possible to relax
-  this dependency but it has not been investigated.
-* `m4`(1).
-* `mkisofs`(1) from the `cdrtools` package available from MacPorts or
-  Homebrew.
+* `curl`
+* `m4`
+* `mkisofs`
 
-Runtime dependencies
---------------------
-
-The results are bootable ISO images and so should run on any `i386` or
-`amd64` hardware.  They are only tested in VirtualBox.
 
 Features in the ISO
 -------------------
@@ -45,20 +52,4 @@ Features in the Vagrant boxes
 * RubyGems 1.3.7
 * Chef 0.9.12
 
-Building
---------
 
-Building ISO images:
-
-	./build-iso
-
-Building virtual machines through VirtualBox:
-
-	./build-vbox
-
-Building Vagrant boxes:
-
-	./build-vagrant
-
-There are matching `clean-{iso,vbox,vagrant}` programs that remove the
-products of their build counterparts.

@@ -17,10 +17,9 @@ do
 		-d bits="$([ "$ARCH" = "i386" ] && echo 32 || echo 64)" \
 		"http://www.ubuntu.com/start-download"
 
-	# Make a writable copy of the original ISO.  This uses the `hdiutil`
-	# command that is specific to Mac OS X.
-        mkdir -p isomount
-        sudo mount -o loop,user "${ORIG}" isomount
+	# Make a writable copy of the original ISO.
+  mkdir -p isomount
+  sudo mount -o loop,user "${ORIG}" isomount
 	rsync -a "isomount/" "$COPY"
 	sudo umount isomount
 	chmod -R +w "$COPY"

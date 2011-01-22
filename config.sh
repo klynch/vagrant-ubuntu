@@ -14,7 +14,6 @@
 : ${ARCHS:="i386 amd64"}
 
 # Hardcoded host information.
-# : ${HOST:="devstructure"}
 : ${HOST:="maverick"}
 : ${DOMAIN:="vagrantup.com"}
 : ${ROOT_PASSWORD:="vagrant"}
